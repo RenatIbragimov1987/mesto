@@ -1,0 +1,17 @@
+.Element__like {
+	cursor: pointer;
+	width: 22px;
+	height: 19px;
+	border-style: none;
+	border-width: initial;
+	border-color: initial;
+	border-image: initial;
+	padding: 0;
+  background: url(../../../images/VectorLike.svg) center center / 100% no-repeat;
+	transition: all 0.3s ease 0s;
+	margin: auto 5px;
+}
+
+.Element__like:hover {
+	background: url(../../../images/Likeblack.svg) center center / 100% no-repeat;
+}

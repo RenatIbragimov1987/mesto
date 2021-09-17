@@ -1,0 +1,22 @@
+.popup__CloseIcon {
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	width: 32px;
+	height: 32px;
+	color: #FFF;
+	background-color: transparent;
+	border: 2px solid #FFF;
+	cursor: pointer;
+	border: none;
+	padding: 0;
+}
+
+@media screen and (max-width: 320px) {
+	.popup__CloseIcon {
+	top: -35px;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	}
+}

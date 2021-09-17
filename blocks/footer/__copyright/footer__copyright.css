@@ -1,0 +1,10 @@
+.footer__copyright {
+	max-width: 318px;
+  font-family: "Inter", Arial, "Times New Roman", sans-serif;
+	font-weight: 400;
+  color: rgba(84, 84, 84, 1);
+	font-style: normal;
+  line-height: 22px;
+  font-size: 18px;
+	padding: 0;
+}

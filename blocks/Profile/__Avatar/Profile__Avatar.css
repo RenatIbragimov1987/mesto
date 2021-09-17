@@ -1,0 +1,15 @@
+.Profile__Avatar {
+	width: 120px;
+	height: 120px;
+	margin: auto 0;
+	display: block;
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 320px) {
+	.Profile__Avatar {
+		max-width: 282px;
+		margin: auto;
+		margin-bottom: 26px;
+	}
+}

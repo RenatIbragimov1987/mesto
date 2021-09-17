@@ -1,0 +1,16 @@
+.page__Elements {
+	padding: 46px 0 0;
+	margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.page__Elements {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.page__Elements {
+		padding-top: 36px;
+	}
+}

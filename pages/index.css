@@ -1,0 +1,46 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+@import url(../blocks/body/body.css);
+
+@import url(../blocks/page/page.css);
+@import url(../blocks/page/__header/page__header.css);
+@import url(../blocks/page/__Profile/page__Profile.css);
+@import url(../blocks/page/__Elements/page__Elements.css);
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__Line/header__Line.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/page/content/content.css);
+@import url(../blocks/page/__footer/page__footer.css);
+
+@import url(../blocks/content/content.css);
+@import url(../blocks/Profile/__Profile-Info/Profile__Profile-Info.css);
+@import url(../blocks/Profile/__title/Profile__title.css);
+@import url(../blocks/Profile/__paragraph/Profile__paragraph.css);
+@import url(../blocks/Profile/__button-add/Profile__button-add.css);
+@import url(../blocks/Profile/__Avatar/Profile__Avatar.css);
+@import url(../blocks/Profile/__Edit-Button/Profile__Edit-Button.css);
+@import url(../blocks/Profile/__plus/Profile__plus.css);
+@import url(../blocks/Profile/__pencil/Profile__pencil.css);
+
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__CloseIcon/popup__CloseIcon.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__Field1/popup__Field1.css);
+@import url(../blocks/popup/__Field2/popup__Field2.css);
+@import url(../blocks/popup/__SubmitButton/popup__SubmitButton.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/__icon/popup__icon.css);
+
+
+@import url(../blocks/Elements/Elements.css);
+@import url(../blocks/Element/Element.css);
+@import url(../blocks/Element/__card/Element__card.css);
+@import url(../blocks/Element/__title/Element__title.css);
+@import url(../blocks/Element/__like/Element__like.css);
+@import url(../blocks/block/block.css);
+
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
