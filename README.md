@@ -1,6 +1,6 @@
 # Проект: Mesto Russia
  
- * [Ссылка на проект](https://renatibragimov1987.github.io/russian-travel/index.html)  
+ * [Ссылка на проект](https://renatibragimov1987.github.io/mesto/index.html)  
  В этом проекте я использовал такие инструменты как Flexbox и Grid Layouts.  
  Научился подключению js.  
  Проект был сделан по макету из Figma.  
