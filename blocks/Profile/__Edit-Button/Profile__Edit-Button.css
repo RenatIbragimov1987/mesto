@@ -1,4 +1,4 @@
-.Profile__Edit-Button {
+.profile__edit-button {
 	width: 24px;
 	height: 24px;
 	color: #FFF;
@@ -11,12 +11,12 @@
 	padding: 0;
 }
 
-.Profile__Edit-Button:hover {
+.profile__edit-button:hover {
 	opacity: 60%;
 }
 
 @media screen and (max-width: 320px) {
-	.Profile__Edit-Button {
+	.profile__edit-button {
 		max-width: 282px;
 		width: 18px;
 		height: 18px;

@@ -13,60 +13,60 @@
 			<img class="header__logo" src="./images/logo.svg" alt="логотип">
 		</header>
 		<main class="content">
-			<section class="Profile page__Profile">
-				<img class="Profile__Avatar" src="./images/image.jpg" alt="Жак-Ив">
-				<div class="Profile__Profile-Info">
-					<h1 class="Profile__title">Жак-Ив Кусто</h1>
-					<button class="Profile__Edit-Button">
-						<img src="./images/VectorEdditButton.svg" class="Profile__pencil" alt="редактор">
+			<section class="profile page__profile">
+				<img class="profile__avatar" src="./images/image.jpg" alt="Жак-Ив">
+				<div class="profile__profile-info">
+					<h1 class="profile__title">Жак-Ив Кусто</h1>
+					<button class="profile__edit-button" type="button">
+						<img src="./images/VectorEdditButton.svg" class="profile__pencil" alt="редактор">
 					</button>
-					<p class="Profile__paragraph">Исследователь океана</p>
+					<p class="profile__paragraph">Исследователь океана</p>
 				</div>
-				<button class="Profile__button-add">
-					<img src="./images/Vectorbutton.svg" class="Profile__plus" alt="плюс">
+				<button class="profile__button-add" type="button">
+					<img src="./images/Vectorbutton.svg" class="profile__plus" alt="плюс">
 				</button>
 			</section>
-			<ul class="Elements page__Elements">
-				<li class="Element">
-					<img class="Element__card" src="./images/черепаха.jpg" alt="черепаха">
+			<ul class="elements page__elements">
+				<li class="element">
+					<img class="element__card" src="./images/черепаха.jpg" alt="черепаха">
 					<div class="block">
-						<p class="Element__title">Черепаха</p>
-						<button class="Element__like"></button>
+						<p class="element__title">Черепаха</p>
+						<button class="element__like" type="button"></button>
 					</div>
 				</li>
-				<li class="Element">
-					<img class="Element__card" src="./images/краб.jpg" alt="крабы">
+				<li class="element">
+					<img class="element__card" src="./images/краб.jpg" alt="крабы">
 					<div class="block">
-						<p class="Element__title">Крабы</p>
-						<button class="Element__like"></button>
+						<p class="element__title">Крабы</p>
+						<button class="element__like" type="button"></button>
 					</div>
 				</li>
-				<li class="Element">
-					<img class="Element__card" src="./images/крылатказебра.jpg" alt="рыба">
+				<li class="element">
+					<img class="element__card" src="./images/крылатказебра.jpg" alt="рыба">
 					<div class="block">
-						<p class="Element__title">Крылатка-зебра</p>
-						<button class="Element__like"></button>
+						<p class="element__title">Крылатка-зебра</p>
+						<button class="element__like" type="button"></button>
 					</div>
 				</li>
-				<li class="Element">
-					<img class="Element__card" src="./images/медузы.jpg" alt="медузы">
+				<li class="element">
+					<img class="element__card" src="./images/медузы.jpg" alt="медузы">
 					<div class="block">
-						<p class="Element__title">Медузы</p>
-						<button class="Element__like"></button>
+						<p class="element__title">Медузы</p>
+						<button class="element__like" type="button"></button>
 					</div>
 				</li>
-				<li class="Element">
-					<img class="Element__card" src="./images/осьминог.jpg" alt="осьминог">
+				<li class="element">
+					<img class="element__card" src="./images/осьминог.jpg" alt="осьминог">
 					<div class="block">
-						<p class="Element__title">Осьминог</p>
-						<button class="Element__like"></button>
+						<p class="element__title">Осьминог</p>
+						<button class="element__like" type="button"></button>
 					</div>
 				</li>
-				<li class="Element">
-					<img class="Element__card" src="./images/морскаязвезда.jpg" alt="морская звезда">
+				<li class="element">
+					<img class="element__card" src="./images/морскаязвезда.jpg" alt="морская звезда">
 					<div class="block">
-						<p class="Element__title">Морская звезда</p>
-						<button class="Element__like"></button>
+						<p class="element__title">Морская звезда</p>
+						<button class="element__like" type="button"></button>
 					</div>
 				</li>
 			</ul>
@@ -77,13 +77,13 @@
 	</div>
 	<div class="popup popup-add">
 		<form class="popup__container">
-			<button class="popup__CloseIcon">
+			<button class="popup__close-icon" type="button">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
 			<h2 class="popup__title">Редактировать профиль</h2>
-			<input type="text" class="popup__Field1">
-			<input type="text" class="popup__Field2">
-			<button type="submit" class="popup__SubmitButton">Сохранить</button>
+			<input type="text" class="popup__field popup__field_form_title">
+			<input type="text" class="popup__field popup__field_form_subtitle">
+			<button type="submit" class="popup__submit-button">Сохранить</button>
 		</form>
 	</div>
 	<script src="./index.js">

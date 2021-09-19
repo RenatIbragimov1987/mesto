@@ -1,4 +1,4 @@
-.Profile__Profile-Info {
+.profile__profile-info {
 	max-width: 336px;
 	min-height: 73px;
 	display: flex;
@@ -6,19 +6,15 @@
 	margin: auto;
 	margin-left: 30px;
 }
-.Profile__Profile-Info:last-child {
-	
-}
 
 @media screen and (max-width: 584px) {
-	.Profile__Profile-Info {
+	.profile__profile-info {
 		margin-left: 0;
-
 	}
 }
 
 @media screen and (max-width: 320px) {
-	.Profile__Profile-Info {
+	.profile__profile-info {
 		max-width: 282px;
 		margin-left: auto;
 	}

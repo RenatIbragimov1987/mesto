@@ -1,21 +1,21 @@
-.Profile__title {
-  	max-width: 336px;
-  	font-family: "Inter", Arial, "Times New Roman", sans-serif;
-  	font-style: normal;
+.profile__title {
+  max-width: 336px;
+  font-family: "Inter", Arial, "Times New Roman", sans-serif;
+  font-style: normal;
 	font-weight: 500;
-  	color: #FFF;
-  	line-height: 48px;
-  	font-size: 42px;
+  color: #FFF;
+  line-height: 48px;
+  font-size: 42px;
 	margin: 0;
 	padding: 0;
 }
 
 @media screen and (max-width: 584px) {
-	.Profile__title {
+	.profile__title {
 		max-width: 300px;
 		margin: auto;
-  		line-height: 39px;
-  		font-size: 35px;
+  	line-height: 39px;
+  	font-size: 35px;
 		margin-right: 10px;
 		margin-left: 46px;
 		text-align: center;
@@ -23,9 +23,9 @@
 }
 
 @media screen and (max-width: 320px) {
-	.Profile__title {
+	.profile__title {
 		max-width: 189px;
-  		line-height: 32,68px;
-  		font-size: 27px;
+  	line-height: 32,68px;
+  	font-size: 27px;
 	}
 }

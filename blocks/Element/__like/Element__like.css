@@ -1,4 +1,4 @@
-.Element__like {
+.element__like {
 	cursor: pointer;
 	width: 22px;
 	height: 19px;
@@ -12,6 +12,6 @@
 	margin: auto 5px;
 }
 
-.Element__like:hover {
+.element__like:hover {
 	background: url(../../../images/Likeblack.svg) center center / 100% no-repeat;
 }

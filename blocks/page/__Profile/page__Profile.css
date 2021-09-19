@@ -1,11 +1,11 @@
-.page__Profile {
-    display: flex;
+.page__profile {
+  display: flex;
 	margin-top: 40px;
 }
 
 
 @media screen and (max-width: 584px) {
-	.page__Profile {
+	.page__profile {
 		max-width: 820px;
 		flex-direction: column;
 
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width: 320px) {
-	.page__Profile {
+	.page__profile {
 		max-width: 282px;
 		display: block;
 		margin-top: 42px;
