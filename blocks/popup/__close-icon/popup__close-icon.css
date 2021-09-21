@@ -11,7 +11,11 @@
 	padding: 0;
 }
 
-@media screen and (max-width: 320px) {
+.popup__close-icon:hover {
+	opacity: 60%;
+}
+
+@media screen and (max-width: 540px) {
 	.popup__close-icon {
 		top: -35px;
 		right: 0;

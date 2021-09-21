@@ -13,5 +13,9 @@
 }
 
 .element__like:hover {
+	opacity: 50%;
+}
+
+.element__like:active {
 	background: url(../../../images/Likeblack.svg) center center / 100% no-repeat;
 }

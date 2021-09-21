@@ -10,7 +10,7 @@
 <body class="body">
 	<div class="page">
 		<header class="header page__header">
-			<img class="header__logo" src="./images/logo.svg" alt="логотип">
+			<a href="#" class="header__logo"></a>
 		</header>
 		<main class="content">
 			<section class="profile page__profile">
@@ -29,64 +29,64 @@
 			<ul class="elements page__elements">
 				<li class="element">
 					<img class="element__card" src="./images/черепаха.jpg" alt="черепаха">
-					<div class="block">
-						<p class="element__title">Черепаха</p>
+					<div class="element__info">
+						<h2 class="element__title">Черепаха</h2>
 						<button class="element__like" type="button"></button>
 					</div>
 				</li>
 				<li class="element">
 					<img class="element__card" src="./images/краб.jpg" alt="крабы">
-					<div class="block">
-						<p class="element__title">Крабы</p>
+					<div class="element__info">
+						<h2 class="element__title">Крабы</h2>
 						<button class="element__like" type="button"></button>
 					</div>
 				</li>
 				<li class="element">
 					<img class="element__card" src="./images/крылатказебра.jpg" alt="рыба">
-					<div class="block">
-						<p class="element__title">Крылатка-зебра</p>
+					<div class="element__info">
+						<h2 class="element__title">Крылатка-зебра</h2>
 						<button class="element__like" type="button"></button>
 					</div>
 				</li>
 				<li class="element">
 					<img class="element__card" src="./images/медузы.jpg" alt="медузы">
-					<div class="block">
-						<p class="element__title">Медузы</p>
+					<div class="element__info">
+						<h2 class="element__title">Медузы</h2>
 						<button class="element__like" type="button"></button>
 					</div>
 				</li>
 				<li class="element">
 					<img class="element__card" src="./images/осьминог.jpg" alt="осьминог">
-					<div class="block">
-						<p class="element__title">Осьминог</p>
+					<div class="element__info">
+						<h2 class="element__title">Осьминог</h2>
 						<button class="element__like" type="button"></button>
 					</div>
 				</li>
 				<li class="element">
 					<img class="element__card" src="./images/морскаязвезда.jpg" alt="морская звезда">
-					<div class="block">
-						<p class="element__title">Морская звезда</p>
+					<div class="element__info">
+						<h2 class="element__title">Морская звезда</h2>
 						<button class="element__like" type="button"></button>
 					</div>
 				</li>
 			</ul>
 		</main>
 		<footer class="footer page__footer">
-			<h2 class="footer__copyright">&copy;2020 Marine animal world</h2>
+			<article class="footer__copyright">&copy;2020 Marine animal world</article>
 		</footer>	
 	</div>
-	<div class="popup popup-add">
-		<form class="popup__container">
+	<div class="popup">
+		<form name="form" class="popup__container">
 			<button class="popup__close-icon" type="button">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
 			<h2 class="popup__title">Редактировать профиль</h2>
-			<input type="text" class="popup__field popup__field_form_title">
-			<input type="text" class="popup__field popup__field_form_subtitle">
+			<input type="text" name="form-title" class="popup__field popup__field_form_title">
+			<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle">
 			<button type="submit" class="popup__submit-button">Сохранить</button>
 		</form>
 	</div>
-	<script src="./index.js">
+	<script src="./scripts/index.js">
 	</script>
 </body>
 </html>
