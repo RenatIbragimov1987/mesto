@@ -1,0 +1,19 @@
+.page__profile {
+  display: flex;
+	margin-top: 40px;
+}
+
+
+@media screen and (max-width: 640px) {
+	.page__profile {
+		max-width: 600px;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.page__profile {
+		max-width: 282px;
+		margin-top: 42px;
+	}
+}
