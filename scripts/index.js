@@ -10,12 +10,12 @@ const profileParagraph = document.querySelector('.profile__paragraph');
 const submitButton = document.querySelector('.popup__submit-button');
 
 function openPopup() {
-    popup.classList.add('popup_opened');    
+  popup.classList.add('popup_opened');    
 }
 
 
 function closePopup() {
-    popup.classList.remove('popup_opened');    
+  popup.classList.remove('popup_opened');    
 }
 popupClose.addEventListener('click', closePopup);
 
