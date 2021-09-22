@@ -12,7 +12,6 @@ const submitButton = document.querySelector('.popup__submit-button');
 function openPopup() {
     popup.classList.add('popup_opened');    
 }
-openButtonPopup.addEventListener('click', openPopup);
 
 
 function closePopup() {
@@ -24,6 +23,7 @@ popupClose.addEventListener('click', closePopup);
 function setPopupInputValue() {
 	nameInput.value = profileTitle.textContent;
 	jobInput.value = profileParagraph.textContent;
+	openPopup();
 }
 
 
@@ -36,7 +36,7 @@ function setNodeTextValue() {
 function formSubmitHandler (e) {
 	e.preventDefault();
 	setNodeTextValue();
-	popup.classList.remove('popup_opened');
+	closePopup();
 }
 
 
