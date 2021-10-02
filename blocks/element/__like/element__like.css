@@ -7,15 +7,11 @@
 	border-color: initial;
 	border-image: initial;
 	padding: 0;
-  background: url(../../../images/VectorLike.svg) center center / 100% no-repeat;
 	transition: all 0.3s ease 0s;
 	margin: auto 5px;
+	background: url(../../../images/VectorLike.svg) center center / 100% no-repeat;
 }
 
 .element__like:hover {
 	opacity: 50%;
-}
-
-.element__like:active {
-	background: url(../../../images/Likeblack.svg) center center / 100% no-repeat;
 }

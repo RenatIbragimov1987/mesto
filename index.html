@@ -22,71 +22,67 @@
 					</button>
 					<p class="profile__paragraph">Исследователь океана</p>
 				</div>
-				<button class="profile__button-add" type="button">
+				<button class="profile__button-add"  type="button">
 					<img src="./images/Vectorbutton.svg" class="profile__plus" alt="плюс">
 				</button>
 			</section>
+			
+			
 			<ul class="elements page__elements">
-				<li class="element">
-					<img class="element__card" src="./images/черепаха.jpg" alt="черепаха">
-					<div class="element__info">
-						<h2 class="element__title">Черепаха</h2>
-						<button class="element__like" type="button"></button>
-					</div>
-				</li>
-				<li class="element">
-					<img class="element__card" src="./images/краб.jpg" alt="крабы">
-					<div class="element__info">
-						<h2 class="element__title">Крабы</h2>
-						<button class="element__like" type="button"></button>
-					</div>
-				</li>
-				<li class="element">
-					<img class="element__card" src="./images/крылатказебра.jpg" alt="рыба">
-					<div class="element__info">
-						<h2 class="element__title">Крылатка-зебра</h2>
-						<button class="element__like" type="button"></button>
-					</div>
-				</li>
-				<li class="element">
-					<img class="element__card" src="./images/медузы.jpg" alt="медузы">
-					<div class="element__info">
-						<h2 class="element__title">Медузы</h2>
-						<button class="element__like" type="button"></button>
-					</div>
-				</li>
-				<li class="element">
-					<img class="element__card" src="./images/осьминог.jpg" alt="осьминог">
-					<div class="element__info">
-						<h2 class="element__title">Осьминог</h2>
-						<button class="element__like" type="button"></button>
-					</div>
-				</li>
-				<li class="element">
-					<img class="element__card" src="./images/морскаязвезда.jpg" alt="морская звезда">
-					<div class="element__info">
-						<h2 class="element__title">Морская звезда</h2>
-						<button class="element__like" type="button"></button>
-					</div>
-				</li>
+			
 			</ul>
+			
 		</main>
 		<footer class="footer page__footer">
 			<p class="footer__copyright">&copy;2020 Marine animal world</p>
 		</footer>	
 	</div>
 	<div class="popup">
-		<form name="form" class="popup__container">
+		<div class="popup__container">
 			<button class="popup__close-icon" type="button">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
-			<h2 class="popup__title">Редактировать профиль</h2>
-			<input type="text" name="form-title" class="popup__field popup__field_form_title">
-			<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle">
-			<button type="submit" class="popup__submit-button">Сохранить</button>
-		</form>
+			<form class="popup__form">
+				<h2 class="popup__title">Редактировать профиль</h2>
+				<input type="text" name="form-title" class="popup__field popup__field_form_title">
+				<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle">
+				<button type="submit" class="popup__submit-button">Сохранить</button>
+			</form>
+		</div>
 	</div>
-	<script src="./scripts/index.js">
-	</script>
+	<div class="popup popup_form_add">
+		<div class="popup__container">
+			<button class="popup__close-icon popup_button_close" type="button">
+				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
+			</button>
+			<form class="popup__form">
+				<h2 class="popup__title">Новое место</h2>
+				<input type="text" name="form-title" class="popup__field popup__field_form_title" placeholder="Название">
+				<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle" placeholder="Ссылка на картинку">
+				<button type="submit" class="popup__submit-button">Создать</button>
+			</form>
+		</div>
+	</div>
+	<div class="popup popup_type_image">
+		<div class="popup__container">
+			<button type="button" class="popup__close-button button"></button>
+			<img src="#" class="popup__image">
+		</div>
+	</div>
+	
+	<template id="card">
+			<li class="element">
+				<div class="element__container">
+					<button class="element__trash" type="button"></button>
+					<img class="element__card" src="" alt="">
+				</div>
+				<div class="element__info">
+					<h2 class="element__title"></h2>
+					<button class="element__like" type="button"></button>
+				</div>
+			</li>
+	</template>
+	<script src="./scripts/index.js"></script>
+	
 </body>
 </html>
