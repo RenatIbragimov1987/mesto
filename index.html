@@ -26,12 +26,8 @@
 					<img src="./images/Vectorbutton.svg" class="profile__plus" alt="плюс">
 				</button>
 			</section>
-			
-			
 			<ul class="elements page__elements">
-			
 			</ul>
-			
 		</main>
 		<footer class="footer page__footer">
 			<p class="footer__copyright">&copy;2020 Marine animal world</p>
@@ -52,21 +48,25 @@
 	</div>
 	<div class="popup popup_form_add">
 		<div class="popup__container">
-			<button class="popup__close-icon popup_button_close" type="button">
+			<button class="popup__close-icon popup__close-icon_form" type="button">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
-			<form class="popup__form">
+			<form class="popup__form popup__form_mesto">
 				<h2 class="popup__title">Новое место</h2>
-				<input type="text" name="form-title" class="popup__field popup__field_form_title" placeholder="Название">
-				<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle" placeholder="Ссылка на картинку">
+				<input type="text" name="form-title" class="popup__field popup__field_title" placeholder="Название">
+				<input type="text" name="form-subtitle" class="popup__field popup__field_subtitle" placeholder="Ссылка на картинку">
 				<button type="submit" class="popup__submit-button">Создать</button>
 			</form>
 		</div>
 	</div>
+
 	<div class="popup popup_type_image">
-		<div class="popup__container">
-			<button type="button" class="popup__close-button button"></button>
-			<img src="#" class="popup__image">
+		<div class="popup__container popup__container_type_image">
+			<button type="button" class="popup__close-icon popup__close-icon_img">
+				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
+			</button>
+			<img class="popup__img" src="" alt="">
+			<h2 class="popup__image-title"></h2>
 		</div>
 	</div>
 	
@@ -74,7 +74,7 @@
 			<li class="element">
 				<div class="element__container">
 					<button class="element__trash" type="button"></button>
-					<img class="element__card" src="" alt="">
+					<img class="element__card" src="#" alt="">
 				</div>
 				<div class="element__info">
 					<h2 class="element__title"></h2>
