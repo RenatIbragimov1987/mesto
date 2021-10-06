@@ -33,15 +33,15 @@
 			<p class="footer__copyright">&copy;2020 Marine animal world</p>
 		</footer>	
 	</div>
-	<div class="popup">
+	<div class="popup popup_edit-profile">
 		<div class="popup__container">
 			<button class="popup__close-icon" type="button">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
 			<form class="popup__form">
 				<h2 class="popup__title">Редактировать профиль</h2>
-				<input type="text" name="form-title" class="popup__field popup__field_form_title">
-				<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle">
+				<input type="text" name="form-title" class="popup__field popup__field_form_title" placeholder="Имя">
+				<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle" placeholder="Вид деятельности">
 				<button type="submit" class="popup__submit-button">Сохранить</button>
 			</form>
 		</div>
@@ -65,7 +65,7 @@
 			<button type="button" class="popup__close-icon popup__close-icon_img">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
-			<img class="popup__img" src="" alt="">
+			<img class="popup__img" src="#" alt="">
 			<h2 class="popup__image-title"></h2>
 		</div>
 	</div>
@@ -74,7 +74,7 @@
 			<li class="element">
 				<div class="element__container">
 					<button class="element__trash" type="button"></button>
-					<img class="element__card" src="#" alt="">
+					<img class="element__card" src="" alt="">
 				</div>
 				<div class="element__info">
 					<h2 class="element__title"></h2>
@@ -82,7 +82,9 @@
 				</div>
 			</li>
 	</template>
+	<script src="./scripts/initial-cards.js"></script>
 	<script src="./scripts/index.js"></script>
+
 	
 </body>
 </html>
