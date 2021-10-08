@@ -25,6 +25,9 @@ function openPopup(popup) {																													//открытие по�
     popup.classList.add('popup_opened')
 };
 popupButtonAdd.addEventListener('click', () => openPopup(popupTypeAdd));
+openButtonPopup.addEventListener('click', () => {
+	openEditProfilePopup()
+});
 
 function closePopup(popup) {																												//закрытие поп
 	popup.classList.remove('popup_opened')
@@ -46,9 +49,8 @@ function openPopupImage(cardLink, cardName) {																				//данные 
 function openEditProfilePopup() {																										//авто-вставка данных профиля
 	nameInput.value = profileTitle.textContent;
 	jobInput.value = profileParagraph.textContent;
-	openButtonPopup.addEventListener('click', () => openPopup(popupEditProfile));
+	openPopup(popupEditProfile)
 }
-openEditProfilePopup()
 
 function fillInUserInputs() {																												//сохранение данных профиля
 	profileTitle.textContent = nameInput.value;
