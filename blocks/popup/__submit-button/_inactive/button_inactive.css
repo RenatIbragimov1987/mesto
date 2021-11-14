@@ -1,0 +1,6 @@
+.button_inactive {
+	border: 1px solid #E5E5E5;
+  background-color: white;
+	color: #E5E5E5;
+	cursor: default;
+}

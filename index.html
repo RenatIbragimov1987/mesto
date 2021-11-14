@@ -38,27 +38,43 @@
 			<button class="popup__close-icon" type="button">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
-			<form class="popup__form">
+
+			<form class="popup__form" novalidate>
 				<h2 class="popup__title">Редактировать профиль</h2>
-				<input type="text" name="form-title" class="popup__field popup__field_form_title" placeholder="Имя">
-				<input type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle" placeholder="Вид деятельности">
-				<button type="submit" class="popup__submit-button">Сохранить</button>
+				<label class="popup__form-wrapper">
+					<input id="popup-field" type="text" name="form-title" class="popup__field popup__field_form_title" placeholder="Имя" minlength="2" maxlength="40" required autocomplete="off">
+					<span class="popup-field-error popup__input-error popup__input-error_active"></span>
+				</label>
+				<label class="popup__form-wrapper">
+					<input id="popup-field" type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle" placeholder="Вид деятельности" minlength="2" maxlength="200" required autocomplete="off">
+					<span class="popup-field-error popup__input-error popup__input-error_active"></span>
+				</label>
+				<button type="submit" class="popup__submit-button button_checkup button_inactive" disabled>Сохранить</button>
 			</form>
 		</div>
 	</div>
+
 	<div class="popup popup_form_add">
 		<div class="popup__container">
 			<button class="popup__close-icon popup__close-icon_form" type="button">
 				<img src="./images/CloseIcon.svg" class="popup__icon" alt="редактор">
 			</button>
-			<form class="popup__form popup__form_mesto">
+			
+			<form class="popup__form popup__form_mesto" novalidate>
 				<h2 class="popup__title">Новое место</h2>
-				<input type="text" name="form-title" class="popup__field popup__field_title" placeholder="Название">
-				<input type="text" name="form-subtitle" class="popup__field popup__field_subtitle" placeholder="Ссылка на картинку">
-				<button type="submit" class="popup__submit-button popup__submit-button_save">Создать</button>
+				<label class="popup__form-wrapper">
+					<input id="popup-field" type="text" name="form-title" class="popup__field popup__field_title" placeholder="Название" required minlength="2" maxlength="30" autocomplete="off">
+					<span class="popup-field-error popup__input-error popup__input-error_active"></span>
+				</label>
+				<label class="popup__form-wrapper">
+					<input id="popup-field" type="url" name="form-subtitle" class="popup__field popup__field_subtitle" placeholder="Ссылка на картинку"  required autocomplete="off">
+					<span class="popup-field-error popup__input-error popup__input-error_active"></span>
+				</label>
+				<button type="submit" class="popup__submit-button popup__submit-button_save button_checkup button_inactive" disabled>Создать</button>
 			</form>
 		</div>
 	</div>
+
 	<div class="popup popup_type_image">
 		<div class="popup__container popup__container_type_image">
 			<button type="button" class="popup__close-icon popup__close-icon_img">
@@ -80,7 +96,9 @@
 				</div>
 			</li>
 	</template>
+	
 	<script src="./scripts/initial-cards.js"></script>
+	<script src="./scripts/validate.js"></script>
 	<script src="./scripts/index.js"></script>
 </body>
 </html>
