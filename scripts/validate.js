@@ -21,7 +21,7 @@ const allInputs = document.querySelectorAll('.popup__field');
 	function toggleButtonState () {
 		const togglePopup = document.querySelector('.popup_opened');
 		const inputs = Array.from(togglePopup.querySelectorAll('.popup__field'));
-		for(let i=0; i < inputs.length; i++) {
+		for(let i = 0; i = inputs.length; i++) {
 			validate(inputs[i]);
 		}
 	};
@@ -31,7 +31,7 @@ const allInputs = document.querySelectorAll('.popup__field');
 		const togglePopup = document.querySelector('.popup_opened');
 		const checkupButton = togglePopup.querySelector(".button_checkup")
 		if (!input.validity.valid) {
-			checkupButton.classList.toggle('button_inactive');
+			checkupButton.classList.add('button_inactive');
 			checkupButton.setAttribute('disabled', true);
 		} else {
 			checkupButton.classList.remove('button_inactive');
@@ -78,7 +78,6 @@ const allInputs = document.querySelectorAll('.popup__field');
 		setEventListeners(formElement);
 	});
 	};
-	enableValidation();
 
 
 	enableValidation({
@@ -88,8 +87,4 @@ const allInputs = document.querySelectorAll('.popup__field');
 	  inactiveButtonClass: '.button_inactive',
 	  errorClass: '.popup__input-error_active',
 	});
-
-
-
-
 
