@@ -37,10 +37,10 @@
 		const togglePopup = document.querySelector('.popup_opened');
 		const checkupButton = togglePopup.querySelector('.popup__submit-button')
 		if (!input.validity.valid) {
-			checkupButton.classList.add('popup__submit_inactive');
+			checkupButton.classList.add('popup__submit-button_inactive');
 			checkupButton.setAttribute('disabled', true);
 		} else {
-			checkupButton.classList.remove('popup__submit_inactive');
+			checkupButton.classList.remove('popup__submit-button_inactive');
 			checkupButton.removeAttribute('disabled');
 		};
 	}
@@ -80,7 +80,7 @@
 		formSelector: '.popup__form',
 		inputSelector: '.popup__field',
 		submitButtonSelector: '.popup__submit-button',
-		inactiveButtonClass: '.popup__submit_inactive',
+		inactiveButtonClass: '.popup__submit-button_inactive',
 		errorClass: '.popup__input-error_active',
 	  });
 	
