@@ -1,5 +1,6 @@
 .page__profile {
   display: flex;
+	justify-content: space-between;
 	margin-top: 40px;
 }
 
@@ -7,13 +8,15 @@
 @media screen and (max-width: 640px) {
 	.page__profile {
 		max-width: 600px;
-		display: block;
+		display: flex;
+		flex-direction: column;
+		margin: 40px auto 0;
 	}
 }
 
 @media screen and (max-width: 320px) {
 	.page__profile {
 		max-width: 282px;
-		margin-top: 42px;
+		margin-top: 38px;
 	}
 }

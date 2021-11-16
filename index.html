@@ -14,16 +14,22 @@
 		</header>
 		<main class="content">
 			<section class="profile page__profile">
-				<img class="profile__avatar" src="./images/image.jpg" alt="Жак-Ив">
-				<div class="profile__profile-info">
-					<h1 class="profile__title">Жак-Ив Кусто</h1>
-					<button class="profile__edit-button" type="button">
-						<img src="./images/VectorEdditButton.svg" class="profile__pencil" alt="редактор">
-					</button>
-					<p class="profile__paragraph">Исследователь океана</p>
+				<div class="profile__container">
+					<div class="profile__avatar-container">
+						<img class="profile__avatar" src="./images/image.jpg" alt="Жак-Ив">	
+					</div>
+					<div class="profile__profile-info">
+						<div class="profile__name-info">
+							<h1 class="profile__title">Жак-Ив Кусто</h1>
+							<button class="profile__edit-button" type="button">
+							<img src="./images/VectorEdditButton.svg" class="profile__pencil" alt="редактор">
+							</button>
+						</div>
+						<p class="profile__paragraph">Исследователь океана</p>
+					</div>	
 				</div>
 				<button class="profile__button-add"  type="button">
-					<img src="./images/Vectorbutton.svg" class="profile__plus" alt="плюс">
+						<img src="./images/Vectorbutton.svg" class="profile__plus" alt="плюс">
 				</button>
 			</section>
 			<ul class="elements page__elements">
@@ -49,7 +55,7 @@
 					<input id="popup-profession-field" type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle" placeholder="Вид деятельности" minlength="2" maxlength="200" required autocomplete="off">
 					<span class="popup-profession-field-error popup__input-error popup__input-error_active"></span>
 				</label>
-				<button type="submit" class="popup__submit-button" disabled>Сохранить</button>
+				<button type="submit" class="popup__submit-button popup_button_inactive" disabled>Сохранить</button>
 			</form>
 		</div>
 	</div>
@@ -70,7 +76,7 @@
 					<input id="popup-address-field" type="url" name="form-subtitle" class="popup__field popup__field_subtitle" placeholder="Ссылка на картинку"  required autocomplete="off">
 					<span class="popup-address-field-error popup__input-error popup__input-error_active"></span>
 				</label>
-				<button type="submit" class="popup__submit-button popup__submit-button_save" disabled>Создать</button>
+				<button type="submit" class="popup__submit-button popup__submit-button_save popup_button_inactive" disabled>Создать</button>
 			</form>
 		</div>
 	</div>
