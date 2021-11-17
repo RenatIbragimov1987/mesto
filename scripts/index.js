@@ -109,8 +109,8 @@ function addCard(evt) {
 	};
 	cardsContainer.prepend(createCard(data.link, data.name))
 	evt.currentTarget.reset();
+	submitButtonOff();	
 	closePopup(popupTypeAdd);
-	submitButtonOff();
 };
 formAddCard.addEventListener('submit', addCard);
 
