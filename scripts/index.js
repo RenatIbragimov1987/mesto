@@ -92,6 +92,14 @@ function submitEditProfileForm (evt) {
 };
 formEditProfile.addEventListener('submit', submitEditProfileForm);
 
+//деактивация кнопки сабмита
+function submitButtonOff () {
+	const activePopup = document.querySelector('.popup__form_mesto');
+	const submitButtonSave = activePopup.querySelector('.popup__submit-button_save');
+	submitButtonSave.classList.add('popup__submit-button_inactive');
+	submitButtonSave.setAttribute('disabled', true);
+};
+
 
 function addCard(evt) {
 	evt.preventDefault();
@@ -102,6 +110,7 @@ function addCard(evt) {
 	cardsContainer.prepend(createCard(data.link, data.name))
 	evt.currentTarget.reset();
 	closePopup(popupTypeAdd);
+	submitButtonOff();
 };
 formAddCard.addEventListener('submit', addCard);
 
