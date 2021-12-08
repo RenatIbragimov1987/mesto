@@ -6,8 +6,9 @@ const openButtonPopup =  document.querySelector('.profile__edit-button');
 const popupEditProfile = document.querySelector('.popup_edit-profile');
 const popupButtonAdd = document.querySelector('.profile__button-add');
 const popupTypeAdd = document.querySelector('.popup_form_add');
-const closePopupEditProfileButton = document.querySelector('.popup__close-icon');
+const popupCloseIconProfil = document.querySelector('.popup__close-icon_profil');
 const closePopupTypeAddButton = document.querySelector('.popup__close-icon_form');
+const popupCloseIconImg = document.querySelector('.popup__close-icon_img');
 const formEditProfile = document.querySelector('.popup__container');
 const profileTitle = document.querySelector('.profile__title');
 const profileParagraph = document.querySelector('.profile__paragraph');
@@ -18,8 +19,7 @@ export const formAddCard = document.querySelector('.popup__form_mesto');
 export const fieldTitle = document.querySelector('.popup__field_title');
 export const fieldSubtitle = document.querySelector('.popup__field_subtitle');
 export const popupTypeImage = document.querySelector('.popup_type_image');
-const popupImageTitle = popupTypeImage.querySelector('.popup__image-title');
-const popupImg = popupTypeImage.querySelector('.popup__img');
+const popupSubmitButtonAdd = document.querySelector('.popup__submit-button_save');
 
 
 const validationSettings = {
@@ -28,7 +28,8 @@ const validationSettings = {
 	submitButtonSelector: '.popup__submit-button',
 	inactiveButtonClass: 'popup__submit-button_inactive',
 	inputErrorClass: 'popup__input-error',
-	errorClass: 'popup__input-error_active'
+	errorClass: 'popup__input-error_active',
+	errorClassBorder: 'popup__field_border_red',
 };
 
 const formValidAdd = new FormValidator(validationSettings, popupTypeAdd);
@@ -38,7 +39,7 @@ const formValidEdit = new FormValidator(validationSettings, popupEditProfile);
 formValidEdit.enableValidation();
 
 
-function openPopup(popup) {																			//открытие поп
+export function openPopup(popup) {																			//открытие поп
     popup.classList.add('popup_opened');
 		document.addEventListener('keydown', escapeClose);					//навесили обработчик закрытия Escape
 		popup.addEventListener('click', overlayClosePopup);
@@ -58,8 +59,9 @@ export function closePopup(popup) {
 };
 
 //закрытие попапов
-closePopupEditProfileButton.addEventListener('click', () => closePopup(popupEditProfile));
+popupCloseIconProfil.addEventListener('click', () => closePopup(popupEditProfile));
 closePopupTypeAddButton.addEventListener('click', () => closePopup(popupTypeAdd));
+popupCloseIconImg.addEventListener('click', () => closePopup(popupTypeImage));
 
 
 //закрытие активного окна попапа через Escape
@@ -77,13 +79,6 @@ function overlayClosePopup (evt) {
 	};
 };
 
-// данные в поп с картинкой
-export function openPopupImage(name, link) {
-	popupImageTitle.textContent = name;
-	popupImageTitle.alt = name;
-	popupImg.src = link;
-	openPopup(popupTypeImage)
-}
 
 //авто-вставка данных профиля
 function openEditProfilePopup() {
@@ -107,37 +102,32 @@ formEditProfile.addEventListener('submit', submitEditProfileForm);
 
 
 export function createCard(item) {
-  const card = new Card(item, '#card', openPopupImage);
+  const card = new Card(item, '#card', popupTypeImage);
   const cardElement = card.renderCard();
   return cardElement;
+	
 }
 
 
 export function addCard(evt) {
   evt.preventDefault();
-  const placeName = fieldTitle.value;
-  const imageLink = fieldSubtitle.value;
   const data = {
-  name: placeName,
-  link: imageLink,
+  name: fieldTitle.value,
+  link: fieldSubtitle.value,
   }
   const card = createCard(data);
   document.querySelector('.elements').prepend(card);
   closePopup(popupTypeAdd);
+	fieldTitle.value = '';
+	fieldSubtitle.value = '';
+	popupSubmitButtonAdd.setAttribute('disabled', true);
+	popupSubmitButtonAdd.classList.toggle('popup__submit-button_inactive');
 }; 
-formAddCard.addEventListener('submit', addCard);
-
-
-// функция подмены класса для лайка
-export function likeToggle(likeCard) {
-	likeCard.classList.toggle('element__like_active_black');
-};
+popupTypeAdd.addEventListener('submit', addCard);
 
 
 initialCards.forEach((item) => {
-	const newCardLoad = new Card(item);
-	const cardElement = newCardLoad.renderCard();
-	document.querySelector('.elements').append(cardElement);
+	cardsContainer.append(createCard(item));
 });
 
 

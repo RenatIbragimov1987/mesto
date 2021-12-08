@@ -3,5 +3,10 @@
 	border-top-right-radius: 10px;
 	width: 282px;
 	height: 282px;
-	background-size: contain;
+	object-fit: cover;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+.element__card:hover {
+	opacity: 85%;
 }
