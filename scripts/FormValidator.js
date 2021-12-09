@@ -6,6 +6,7 @@ export class FormValidator {
 			this._inactiveButtonClass = data.inactiveButtonClass;
 			this._inputErrorClass = data.inputErrorClass;
 			this._errorClass = data.errorClass;
+			this._errorClassBorder = data.errorClassBorder
 			this._formElement = formElement;
 			this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
 			this._submitButton = this._formElement.querySelector(this._submitButtonSelector);
@@ -15,7 +16,7 @@ export class FormValidator {
 	_showInputError(inputElement) {
 		const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
 		inputElement.classList.add(this._errorClass);
-		inputElement.classList.add('popup__field_border_red');
+		inputElement.classList.add(this._errorClassBorder);
 		errorElement.classList.add(this._inputErrorClass);
 	  errorElement.textContent = inputElement.validationMessage;
 	};
@@ -23,7 +24,7 @@ export class FormValidator {
 	_hideInputError(inputElement) {
 		const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
 		inputElement.classList.remove(this._errorClass);
-		inputElement.classList.remove('popup__field_border_red');	
+		inputElement.classList.remove(this._errorClassBorder);	
 	  errorElement.classList.remove(this._inputErrorClass);
 	  errorElement.textContent = '';
 	};

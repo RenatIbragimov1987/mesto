@@ -1,6 +1,6 @@
-import { openPopup, popupTypeImage } from './index.js';
+import { openPopup, popupTypeImage } from './utils.js';
 export default class Card {
-	static _elementsTemplate = document.querySelector('#card').content;
+	static _cardSelector = document.querySelector('#card').content;
 
 	constructor(data, cardSelector, openPopup) {
 		this._name = data.name;
@@ -12,31 +12,38 @@ export default class Card {
 	_likeCard(evt) {
 		evt.target.classList.toggle('element__like_active_black');
 	}
-	_trashCard(evt) {
-		evt.target.closest('.element').remove();
+	
+	_trashCard() {
+		this._view.remove();
+		this._view = null;
 	}
-
 	_openPopupImage() {
 		popupTypeImage.querySelector('.popup__img').src = this._link;
-    popupTypeImage.querySelector('.popup__img').alt = this._link;
+    popupTypeImage.querySelector('.popup__img').alt = this._name;
     popupTypeImage.querySelector('.popup__image-title').textContent = this._name;
     openPopup(popupTypeImage);
 	}
 
 	renderCard = () => {
-		this._view = Card._elementsTemplate.querySelector('.element').cloneNode(true);
-		this._view.querySelector('.element__title').alt = this._link;
+		this._view = Card._cardSelector.querySelector('.element').cloneNode(true);
+		this._view.querySelector('.element__card').alt = this._name;
 		this._view.querySelector('.element__title').textContent = this._name;
 		this._view.querySelector('.element__card').src = this._link;
 		this._setEventListenersCard();
 		return this._view
+		
 	}
 
 	_setEventListenersCard () {
 		this._view.querySelector('.element__like').addEventListener('click', this._likeCard);
-		this._view.querySelector('.element__trash').addEventListener('click', this._trashCard);
+		
+		
 		this._view.querySelector('.element__card').addEventListener('click', () => {
 			this._openPopupImage();
 		});
+		this._view.querySelector('.element__trash').addEventListener('click', () => {
+			this._trashCard();
+		});	
 	}
+
 }

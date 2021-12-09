@@ -1,6 +1,7 @@
 import { FormValidator } from './FormValidator.js';
 import Card from './Card.js';
 import { initialCards } from './initial-cards.js';
+import { openPopup, popupTypeImage, closePopup } from './utils.js';
 
 const openButtonPopup =  document.querySelector('.profile__edit-button');
 const popupEditProfile = document.querySelector('.popup_edit-profile');
@@ -18,7 +19,7 @@ export const cardsContainer = document.querySelector('.elements');
 export const formAddCard = document.querySelector('.popup__form_mesto');
 export const fieldTitle = document.querySelector('.popup__field_title');
 export const fieldSubtitle = document.querySelector('.popup__field_subtitle');
-export const popupTypeImage = document.querySelector('.popup_type_image');
+
 const popupSubmitButtonAdd = document.querySelector('.popup__submit-button_save');
 
 
@@ -39,11 +40,7 @@ const formValidEdit = new FormValidator(validationSettings, popupEditProfile);
 formValidEdit.enableValidation();
 
 
-export function openPopup(popup) {																			//открытие поп
-    popup.classList.add('popup_opened');
-		document.addEventListener('keydown', escapeClose);					//навесили обработчик закрытия Escape
-		popup.addEventListener('click', overlayClosePopup);
-};
+
 
 popupButtonAdd.addEventListener('click', () => openPopup(popupTypeAdd));
 openButtonPopup.addEventListener('click', () => {
@@ -51,12 +48,7 @@ openButtonPopup.addEventListener('click', () => {
 });
 
 
-//закрытие поп
-export function closePopup(popup) {
-	popup.classList.remove('popup_opened');
-	document.removeEventListener('keydown', escapeClose);																//сняли обработчик закрытия Escape
-	popup.removeEventListener('click', overlayClosePopup);
-};
+
 
 //закрытие попапов
 popupCloseIconProfil.addEventListener('click', () => closePopup(popupEditProfile));
@@ -64,20 +56,9 @@ closePopupTypeAddButton.addEventListener('click', () => closePopup(popupTypeAdd)
 popupCloseIconImg.addEventListener('click', () => closePopup(popupTypeImage));
 
 
-//закрытие активного окна попапа через Escape
-function escapeClose (evt)	{
-	if(evt.key === 'Escape') {
-		const activePopup = document.querySelector('.popup_opened');
-		closePopup(activePopup);
-  };
-};
 
-//закрытие кликом в пустом месте
-function overlayClosePopup (evt) {
-	if (!evt.target.closest('.popup__container')) {
-		closePopup(evt.target.closest('.popup'));
-	};
-};
+
+
 
 
 //авто-вставка данных профиля
@@ -101,8 +82,8 @@ function submitEditProfileForm (evt) {
 formEditProfile.addEventListener('submit', submitEditProfileForm);
 
 
-export function createCard(item) {
-  const card = new Card(item, '#card', popupTypeImage);
+export function createCard(item, cardSelector) {
+  const card = new Card(item, cardSelector);
   const cardElement = card.renderCard();
   return cardElement;
 	
