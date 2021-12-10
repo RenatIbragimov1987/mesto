@@ -22,7 +22,6 @@ export const fieldSubtitle = document.querySelector('.popup__field_subtitle');
 
 const popupSubmitButtonAdd = document.querySelector('.popup__submit-button_save');
 
-
 const validationSettings = {
   formSelector: '.popup__form',
 	inputSelector: '.popup__field',
@@ -39,27 +38,15 @@ formValidAdd.enableValidation();
 const formValidEdit = new FormValidator(validationSettings, popupEditProfile);
 formValidEdit.enableValidation();
 
-
-
-
 popupButtonAdd.addEventListener('click', () => openPopup(popupTypeAdd));
 openButtonPopup.addEventListener('click', () => {
 	openEditProfilePopup()
 });
 
-
-
-
 //закрытие попапов
 popupCloseIconProfil.addEventListener('click', () => closePopup(popupEditProfile));
 closePopupTypeAddButton.addEventListener('click', () => closePopup(popupTypeAdd));
 popupCloseIconImg.addEventListener('click', () => closePopup(popupTypeImage));
-
-
-
-
-
-
 
 //авто-вставка данных профиля
 function openEditProfilePopup() {
@@ -81,14 +68,11 @@ function submitEditProfileForm (evt) {
 };
 formEditProfile.addEventListener('submit', submitEditProfileForm);
 
-
 export function createCard(item, cardSelector) {
   const card = new Card(item, cardSelector);
   const cardElement = card.renderCard();
-  return cardElement;
-	
+  return cardElement;	
 }
-
 
 export function addCard(evt) {
   evt.preventDefault();
@@ -96,7 +80,7 @@ export function addCard(evt) {
   name: fieldTitle.value,
   link: fieldSubtitle.value,
   }
-  const card = createCard(data);
+  const card = createCard(data, '#card');
   document.querySelector('.elements').prepend(card);
   closePopup(popupTypeAdd);
 	fieldTitle.value = '';
@@ -106,9 +90,8 @@ export function addCard(evt) {
 }; 
 popupTypeAdd.addEventListener('submit', addCard);
 
-
 initialCards.forEach((item) => {
-	cardsContainer.append(createCard(item));
+	cardsContainer.append(createCard(item, '#card'));
 });
 
 

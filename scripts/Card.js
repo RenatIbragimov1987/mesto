@@ -1,13 +1,14 @@
 import { openPopup, popupTypeImage } from './utils.js';
 export default class Card {
-	static _cardSelector = document.querySelector('#card').content;
-
-	constructor(data, cardSelector, openPopup) {
+	constructor(data, cardSelector) {
 		this._name = data.name;
     this._link = data.link;
-		this._openPopup = openPopup;
 		this._cardSelector = cardSelector;
 	}
+
+	_getTemplate() {
+		return document.querySelector(this._cardSelector).content.querySelector('.element').cloneNode(true);
+  } 
 
 	_likeCard(evt) {
 		evt.target.classList.toggle('element__like_active_black');
@@ -25,7 +26,7 @@ export default class Card {
 	}
 
 	renderCard = () => {
-		this._view = Card._cardSelector.querySelector('.element').cloneNode(true);
+		this._view = this._getTemplate();
 		this._view.querySelector('.element__card').alt = this._name;
 		this._view.querySelector('.element__title').textContent = this._name;
 		this._view.querySelector('.element__card').src = this._link;
@@ -36,8 +37,6 @@ export default class Card {
 
 	_setEventListenersCard () {
 		this._view.querySelector('.element__like').addEventListener('click', this._likeCard);
-		
-		
 		this._view.querySelector('.element__card').addEventListener('click', () => {
 			this._openPopupImage();
 		});
@@ -45,5 +44,4 @@ export default class Card {
 			this._trashCard();
 		});	
 	}
-
 }
