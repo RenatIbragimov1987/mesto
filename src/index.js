@@ -84,8 +84,8 @@ popupButtonAdd.addEventListener('click', () => popupAdd.open(popupTypeAdd));
 const userInfo = new UserInfo({													//данные пользователя
 	profileTitle: profileTitle,
 	profileParagraph: profileParagraph,
-})
-userInfo.getUserInfo()
+});
+userInfo.getUserInfo();
 
 const cardList = new Section({													//создали секцию, через функцию отобразили карточки
 	items: initialCards,
@@ -100,23 +100,23 @@ const cardList = new Section({													//создали секцию, чер
 		},
 		'#card',
 		);
-		const rendCard = card.renderCard()
-		return rendCard
+		const rendCard = card.renderCard();
+		return rendCard;
 	}
  	},
 	cardsContainer,
 );
-const fff = cardList.renderItems()
-cardList.addItem(fff)
+const cardSection = cardList.renderItems();
+cardList.addItem(cardSection);
 
 
 const popupWithFormProfile = new PopupWithForm ({									//попап с данными пользователя
 	popupSelector: popupEditProfile,
 	colbackSubmitForm: () => {
-		userInfo.setUserInfo()
+		userInfo.setUserInfo();
 	}
 });
-popupWithFormProfile.setEventListeners()
+popupWithFormProfile.setEventListeners();
 
 
 	
@@ -134,8 +134,8 @@ const popupWithFormAdd = new PopupWithForm ({										//попап с доба�
 		}, 
 		'#card',
 		);	
-	const cardPopupAdd = cardAdd.renderCard()
+	const cardPopupAdd = cardAdd.renderCard();
 	cardsContainer.prepend(cardPopupAdd);
 	}
 });
-popupWithFormAdd.setEventListeners()
+popupWithFormAdd.setEventListeners();
