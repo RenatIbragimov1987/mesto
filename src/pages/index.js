@@ -38,7 +38,6 @@ function createCard(item) {
 	const card = new Card({
 		data: item,
 		handleCardClick: () => {
-			               
 			cardPopup.open(item);
 		}
 	},
