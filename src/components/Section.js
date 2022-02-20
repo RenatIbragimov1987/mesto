@@ -12,11 +12,8 @@ export default class Section {
 
 	renderItems() {																	// проход по initial-card
 		this._items.forEach(item =>	{
-      		this.addItem(this._renderer(item));
+      		this.addItem(this._renderer(item));	
     	});
 	}
-
-	prepend() {
-		this._selectorContainer.prepend(element);
-	}
+	
 }
