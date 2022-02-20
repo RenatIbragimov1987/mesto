@@ -24,8 +24,8 @@ formValidEdit.enableValidation();
 const cardList = new Section({
 	items: initialCards,
 	renderer: (initialCards) => {
-		const newCard = createCard(initialCards);
-		cardList.addItem(newCard);
+		const newCard = createCard(initialCards)
+		cardList.addItem(newCard)
 	}
 },
 	cardsContainer,
@@ -38,7 +38,7 @@ function createCard(item) {
 	const card = new Card({
 		data: item,
 		handleCardClick: () => {
-			cardPopup.open(item);
+			cardPopup.open(item)
 		}
 	},
 	'#card',
