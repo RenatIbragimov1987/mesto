@@ -75,15 +75,16 @@ const popupWithFormProfile = new PopupWithForm ({
 popupWithFormProfile.setEventListeners();
 
 //попап с добавлением карточки
-popupButtonAdd.addEventListener('click', () => popupWithFormAdd.open()); 
+popupButtonAdd.addEventListener('click', () => {
+	popupWithFormAdd.open();
+	formValidAdd.resetValidation();
+});
+
 const popupWithFormAdd = new PopupWithForm ({										
 	popupSelector: '.popup_form_add',
 	colbackSubmitForm: (item) => {
-		const data = { 
-			name: fieldTitle.value, 
-			link: fieldSubtitle.value,
-		};
-		cardList.addPreppend(createCard(data))
+		const credCard = createCard({name:item['form-title'], link:item['form-subtitle']});
+		cardList.addPreppend(credCard);
 	}
 });
 popupWithFormAdd.setEventListeners();
