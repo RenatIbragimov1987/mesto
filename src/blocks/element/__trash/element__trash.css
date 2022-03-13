@@ -10,6 +10,7 @@
   background: url(../../../images/Trash.svg) center center / 100% no-repeat;
 	transition: all 0.3s ease 0s;
 	z-index: 1;
+	display: none;
 }
 
 .element__trash:hover {

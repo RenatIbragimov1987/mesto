@@ -10,8 +10,9 @@ export default class Section {
 		this._selectorContainer.append(element);
 	}
 
-	renderItems() {																	// проход по initial-card
-		this._items.forEach(item =>	this._renderer(item));
+	renderItems(items) {																	// проход по initial-card
+		items.forEach(item =>	this._renderer(item));
+		
 	}
 
 	addPreppend(element) {																//метод отрисовки всех элементов

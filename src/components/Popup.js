@@ -3,6 +3,8 @@ export default class Popup {
 		this._popup = document.querySelector(popupSelector);
 		this._handleEscClose = this._handleEscClose.bind(this);
 		this._iconClose = this._popup.querySelector('.popup__icon');
+		this._saveButton = this._popup.querySelector('.popup__submit-button');
+
 	}
 	
 	open() {
@@ -21,12 +23,20 @@ export default class Popup {
 		}
 	}
 
+	loadStatusButton(isLoading) {
+		if (isLoading) {
+			this._saveButton.textContent = 'Сохранение...'
+		} else if (this._popupSelector === '.popup_form_add') {
+			this._saveButton.textContent = 'Создать'
+		} else {
+			this._saveButton.textContent = 'Сохранить'
+		}
+	}
+
 	setEventListeners() {
-		
 			this._iconClose.addEventListener('click', () => {
 				this.close()
 			});
-
 		this._popup.addEventListener('click', (evt) => {
       if (evt.target.classList.contains('popup')) {
         this.close();

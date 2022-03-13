@@ -1,21 +1,21 @@
-
-export default class UserInfo {														//изменение данных профиля на странице
-	constructor(name, job) { 
-		this._profileTitle = name;
-		this._profileParagraph = job;
-		this._nameInput = document.querySelector('.popup__field_form_title');
-		this._jobInput = document.querySelector('.popup__field_form_subtitle');
+export default class UserInfo {
+	constructor(profileTitle, profileParagraph, profileAvatar) { 
+		this._profileTitle = profileTitle;
+		this._profileParagraph = profileParagraph;
+		this._profileAvatar = profileAvatar;
 	}
 
-	getUserInfo() {
+	getUserInfo = () => {
 		return {
 			nameInfo: this._profileTitle.textContent,
-			jobInfo: this._profileParagraph.textContent,
-		};
+			jobInfo: this._profileParagraph.textContent
+		}
+	}
+	
+	setUserInfo(item) {
+		this._profileTitle.textContent = item.name;
+		this._profileParagraph.textContent = item.about;
+		this._profileAvatar.src = item.avatar;
 	}
 
-	setUserInfo(infoName, infoParagraph) {																	// вставляем новые данные на страниу
-		this._profileTitle.textContent = infoName;
-		this._profileParagraph.textContent = infoParagraph;
-	}	
 }

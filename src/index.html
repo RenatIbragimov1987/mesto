@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Renat Ibragimov">
 		<title>Mesto</title>
 		
 </head>
@@ -16,16 +17,19 @@
 			<section class="profile page__profile">
 				<div class="profile__container">
 					<div class="profile__avatar-container">
-						<img class="profile__avatar" src="<%=require('./images/image.jpg')%>" alt="Жак-Ив">	
+						<img class="profile__avatar" src="#" alt="аватар">
+						<div class="profile__button-background">
+							<button type="button" class="profile__edit-avatar" aria-label="Редактировать аватар"></button>
+						</div> 	
 					</div>
 					<div class="profile__profile-info">
 						<div class="profile__name-info">
-							<h1 class="profile__title">Жак-Ив Кусто</h1>
+							<h1 class="profile__title"></h1>
 							<button class="profile__edit-button" type="button">
 							<img src="<%=require('./images/VectorEdditButton.svg')%>" class="profile__pencil" alt="редактор">
 							</button>
 						</div>
-						<p class="profile__paragraph">Исследователь океана</p>
+						<p class="profile__paragraph"></p>
 					</div>
 				</div>
 				<button class="profile__button-add"  type="button">
@@ -46,16 +50,33 @@
 			<button class="popup__close-icon popup__close-icon_profil" type="button">
 				<img src="<%=require('./images/CloseIcon.svg')%>" class="popup__icon" alt="редактор">
 			</button>
-
 			<form class="popup__form" novalidate>
 				<fieldset class="popup__set">
 				<h2 class="popup__title">Редактировать профиль</h2>
 				<label class="popup__form-wrapper">
-					<input id="popup-name-field" type="text" name="form-title" class="popup__field popup__field_form_title" placeholder="Имя" minlength="2" maxlength="40" required autocomplete="off">
+					<input id="popup-name-field" type="text" name="name" class="popup__field popup__field_form_title" placeholder="Имя" minlength="2" maxlength="40" required autocomplete="off">
 					<span class="popup-name-field-error popup__input-error popup__input-error_active"></span>
 				</label>
 				<label class="popup__form-wrapper">
-					<input id="popup-profession-field" type="text" name="form-subtitle" class="popup__field popup__field_form_subtitle" placeholder="Вид деятельности" minlength="2" maxlength="200" required autocomplete="off">
+					<input id="popup-profession-field" type="text" name="about" class="popup__field popup__field_form_subtitle" placeholder="Вид деятельности" minlength="2" maxlength="200" required autocomplete="off">
+					<span class="popup-profession-field-error popup__input-error popup__input-error_active"></span>
+				</label>
+				<button type="submit" class="popup__submit-button popup__submit-button_save popup__submit-button_inactive" disabled>Сохранить</button>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div class="popup popup_update-avatar">
+		<div class="popup__container">
+			<button class="popup__close-icon popup__close-icon_profil" type="button">
+				<img src="<%=require('./images/CloseIcon.svg')%>" class="popup__icon" alt="редактор">
+			</button>
+			<form class="popup__form">
+				<fieldset class="popup__set">
+				<h2 class="popup__title">Обновить аватар</h2>
+				<label class="popup__form-wrapper">
+					<input id="popup-profession-field" type="url" class="popup__field popup__field_form_subtitle" minlength="2" maxlength="200" required autocomplete="off">
 					<span class="popup-profession-field-error popup__input-error popup__input-error_active"></span>
 				</label>
 				<button type="submit" class="popup__submit-button popup__submit-button_save popup__submit-button_inactive" disabled>Сохранить</button>
@@ -69,7 +90,6 @@
 			<button class="popup__close-icon popup__close-icon_form" type="button">
 				<img src="<%=require('./images/CloseIcon.svg')%>" class="popup__icon" alt="редактор">
 			</button>
-			
 			<form class="popup__form popup__form_mesto" novalidate>
 				<fieldset class="popup__set">
 				<h2 class="popup__title">Новое место</h2>
@@ -86,6 +106,16 @@
 			</form>
 		</div>
 	</div>
+	
+	<div class="popup popup_form_delete-card">
+		<div class="popup__container_delete">
+			<button class="popup__close-icon popup__close-icon_form" type="button">
+				<img src="<%=require('./images/CloseIcon.svg')%>" class="popup__icon" alt="редактор">
+			</button>
+				<h2 class="popup__title popup__title_delete-card">Вы уверены?</h2>
+				<button type="submit" class="popup__submit-button">Да</button>
+		</div>
+	</div>
 
 	<div class="popup popup_type_image">
 		<div class="popup__container popup__container_type_image">
@@ -96,6 +126,7 @@
 			<h2 class="popup__image-title"></h2>
 		</div>
 	</div>
+
 	<template id="card">
 			<li class="element">
 				<div class="element__container">
@@ -104,9 +135,13 @@
 				</div>
 				<div class="element__info">
 					<h2 class="element__title" type="text"></h2>
-					<button class="element__like" type="button"></button>
-				</div>
+					<div class="element__likes-info">
+						<button class="element__like" type="button"></button>
+						<p class="element__counter-likes">0</p>
+					</div>
+				</div>				
 			</li>
 	</template>
+
 </body>
 </html>
