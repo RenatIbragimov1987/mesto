@@ -2,8 +2,7 @@ import './index.css';
 
 import { validationSettings, profileTitle, profileParagraph, profileAvatar, nameInput, 
 	jobInput, popupTypeAdd, popupEditProfile, openButtonPopup, cardsContainer, 
-	popupButtonAdd, fieldTitle, fieldSubtitle, popupUpdateAvatar, btnAvatar,
-	profileContainer, elementCardUrl, elementCardName, profileAvatarContainer } from '../utils/constants.js';
+	popupButtonAdd, popupUpdateAvatar, btnAvatar } from '../utils/constants.js';
 
 import { FormValidator } from '../components/FormValidator.js';
 import Popup from '../components/Popup.js';
@@ -136,8 +135,6 @@ const popupWithFormAdd = new PopupWithForm ({
 popupWithFormAdd.setEventListeners();
 
 
-
-
 //вставка новых данных пользователя на страницу
 const popupWithFormProfile = new PopupWithForm ({
 	popupSelector: '.popup_edit-profile',
@@ -171,8 +168,7 @@ const formValidAdd = new FormValidator(validationSettings, popupTypeAdd);
 formValidAdd.enableValidation();
 const formValidEdit = new FormValidator(validationSettings, popupEditProfile);
 formValidEdit.enableValidation();
-// const formValidUpdateAvatar = new FormValidator(validationSettings, popupUpdateAvatar);
-// formValidUpdateAvatar.enableValidation();
+
 const formValidChangeAvatar = new FormValidator(validationSettings, popupUpdateAvatar);
 formValidChangeAvatar.enableValidation();
 
