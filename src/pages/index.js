@@ -42,18 +42,18 @@ const popupWithAvatar = new PopupWithForm({
 	popupSelector: '.popup_update-avatar',
 	colbackSubmitForm: (item) => {
 		popupWithAvatar.loadStatusButton(true);
-		console.log(api.profileEditingAvatar)
 		api.profileEditingAvatar(item)
 				.then(item => {
-					userInfo.setUserInfo(item)
+					userInfo.setUserInfo(item);
+					popupWithAvatar.close();
 				})
 				.catch(err => {
 					console.log(`Ошибка обновления аватара: ${err}`)
 				})
 				.finally(() => {
-					popupWithFormAdd.loadStatusButton(false);
+					popupWithAvatar.loadStatusButton(false);
 				})
-		popupWithAvatar.close()
+		
 	}
 });
 popupWithAvatar.setEventListeners();
@@ -122,6 +122,7 @@ const popupWithFormAdd = new PopupWithForm ({
       api.addingNewCard(item)
         .then(res => {
           cardList.addPreppend(createCard(res));
+					popupWithFormAdd.close();
         })
         .catch(err => {
           console.log(`Ошибка добавления карточки: ${err}`)
@@ -129,7 +130,6 @@ const popupWithFormAdd = new PopupWithForm ({
         .finally(() => {
 					popupWithFormAdd.loadStatusButton(false);
         })
-		popupWithFormAdd.close()
 	}
 })
 popupWithFormAdd.setEventListeners();
