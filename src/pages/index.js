@@ -189,5 +189,5 @@ const popupWithImage = new PopupWithImage ('.popup_type_image');
 popupWithImage.setEventListeners();
 
 // попап удаления карточки
-const popupDeleteCard = new PopupWithConfirm('.popup_form_delete-card');
+const popupDeleteCard = new PopupWithConfirm('.popup_type_delete-card');
 popupDeleteCard.setEventListeners();
