@@ -1,6 +1,6 @@
 # Проект: Mesto Russia
  
- * [Ссылка на проект](https://renatibragimov1987.github.io/mesto/index.html)  
+ * [Ссылка на проект](https://renatibragimov1987.github.io/mesto/src/index.html)  
  В этом проекте я использовал навыки изучения JS.  
  Произведен рефакторинг с использованием ООП  
  Добавлен класс Api отвечающий за запрсы на сервер  
