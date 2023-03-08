@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production",
+    "build": "rd /s /q dist && webpack",
     "dev": "webpack serve",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Renat Ibragimov",
   "license": "ISC",
@@ -25,7 +25,7 @@
     "postcss-loader": "^6.2.1",
     "webpack": "^5.69.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "core-js": "^3.21.0"
