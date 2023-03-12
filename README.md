@@ -1,7 +1,7 @@
 # Проект: Mesto Russia
 
  ![фото сайта](https://user-images.githubusercontent.com/87523552/224565787-9ebb29d1-bf40-4b47-b259-8025b3412245.png)
- <!-- * [Ссылка на проект](https://renatibragimov1987.github.io/mesto/src/images/site-foto.jpg)   -->
+
  В этом проекте я использовал навыки изучения JS.  
  Произведен рефакторинг с использованием ООП  
  Добавлен класс Api отвечающий за запрсы на сервер  
