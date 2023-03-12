@@ -1,0 +1,15 @@
+.profile__button-title {
+  font-family: "Inter", Arial, "Times New Roman", sans-serif;
+  font-style: normal;
+	font-weight: 400;
+  color: #FFF;
+  line-height: 18px;
+  font-size: 16px;
+	margin: 6px auto;
+	position: absolute;
+	top: -30px;
+	width: 150px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
