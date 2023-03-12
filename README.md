@@ -1,5 +1,6 @@
 # Проект: Mesto Russia
- ![Image alt](https://github.com/renatibragimov1987.github.io/mesto/raw/main/src/images/foto-site.png)
+
+ ![Image alt](https://github.com/renatibragimov1987.github.io/mesto/main/src/images/foto-site.png)
  <!-- * [Ссылка на проект](https://renatibragimov1987.github.io/mesto/src/images/site-foto.jpg)   -->
  В этом проекте я использовал навыки изучения JS.  
  Произведен рефакторинг с использованием ООП  
